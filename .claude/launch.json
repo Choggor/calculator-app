@@ -1,0 +1,13 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "calculator-app (Vite dev)",
+      "runtimeExecutable": "C:\\Program Files\\nodejs\\node.exe",
+      "runtimeArgs": ["node_modules/vite/bin/vite.js"],
+      "port": 5173,
+      "autoPort": true,
+      "cwd": "C:\\Users\\mattt\\Uni\\AI elective\\AT2\\test-repo\\calculator-app"
+    }
+  ]
+}
