@@ -1,6 +1,15 @@
 import { useState } from 'react'
 import './App.css'
 
+const SHAPES = ['circle', 'squircle', 'diamond', 'hexagon', 'parallelogram', 'pill', 'triangle', 'star']
+
+const BUTTON_SHAPES = (() => {
+  const all = ['C', '±', '%', '÷', '7', '8', '9', '×', '4', '5', '6', '−', '1', '2', '3', '+', '0', '.', '=']
+  const map = {}
+  all.forEach(b => { map[b] = SHAPES[Math.floor(Math.random() * SHAPES.length)] })
+  return map
+})()
+
 const BUTTONS = [
   ['C', '±', '%', '÷'],
   ['7', '8', '9', '×'],
@@ -106,6 +115,7 @@ export default function App() {
                 key={label}
                 className={[
                   'btn',
+                  `btn-shape-${BUTTON_SHAPES[label]}`,
                   label === '0' ? 'btn-wide' : '',
                   isOperator(label) || label === '=' ? 'btn-operator' : '',
                   ['C', '±', '%'].includes(label) ? 'btn-function' : '',
